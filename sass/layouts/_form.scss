@@ -1,0 +1,20 @@
+/* location choice of the city*/
+.location{
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+
+    &_cityChoice{
+        border: none;
+    background-color: $background-color;
+    font-size: 14px;
+    font-weight: 300;
+    color: black;
+    }
+    &_icone{
+        display: flex;
+        align-items: center;
+        padding-right: 15px;
+    }
+}

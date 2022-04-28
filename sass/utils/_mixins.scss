@@ -1,0 +1,7 @@
+@mixin btn-design {
+    color: white;
+    padding: 15px 22px;
+    border: none;
+    border-radius: 2rem;
+    background-image: linear-gradient($secondary, $primary);
+}

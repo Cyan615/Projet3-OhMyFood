@@ -10,8 +10,24 @@ body {
   font-family: roboto, sans-serif;
 }
 
+.presentation_btn {
+  color: white;
+  padding: 15px 22px;
+  border: none;
+  border-radius: 2rem;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 3px 3px 12px 3px rgb(226, 220, 220);
+  cursor: pointer;
+  transition: all;
+}
+.presentation_btn:hover {
+  box-shadow: 3px 3px 12px 3px #9d8888;
+  opacity: 0.8;
+}
+
+/* general header */
 header {
-  box-shadow: 0px 0px 3px rgb(220, 216, 224);
+  box-shadow: 0px 0px 5px rgb(226, 220, 220);
   padding: 20px 0px;
 }
 
@@ -22,13 +38,13 @@ header {
   width: 50%;
 }
 
+/* location choice of the city*/
 .location {
   background-color: rgba(223, 213, 213, 0.521);
   display: flex;
   justify-content: center;
   height: 50px;
 }
-
 .location_cityChoice {
   border: none;
   background-color: rgba(223, 213, 213, 0.521);
@@ -36,7 +52,6 @@ header {
   font-weight: 300;
   color: black;
 }
-
 .location_icone {
   display: flex;
   align-items: center;
@@ -49,14 +64,12 @@ header {
   justify-content: center;
   align-content: center;
 }
-
 .presentation_title {
   width: 60%;
   font-size: 22px;
   font-weight: 700;
   text-align: center;
 }
-
 .presentation_info {
   text-align: center;
   font-weight: 100;
