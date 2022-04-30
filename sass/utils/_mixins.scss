@@ -5,3 +5,7 @@
     border-radius: 2rem;
     background-image: linear-gradient($secondary, $primary);
 }
+
+@mixin base-Bshadow {
+    box-shadow: 1px 4px 8px 3px rgba(130,130,130,0.21);
+}
