@@ -81,6 +81,9 @@ header {
   font-size: 15px;
 }
 
+.functioning {
+  margin-bottom: 3rem;
+}
 .functioning h2 {
   margin-left: 5%;
   margin-top: 2.5rem;
@@ -131,6 +134,47 @@ header {
 }
 .functioning li:hover .fas {
   color: #9356dc;
+}
+
+.restaurant-list {
+  padding: 2rem 1rem;
+  background-color: rgba(244, 240, 240, 0.89);
+}
+.restaurant-list__cards {
+  border: 2px solid palevioletred;
+}
+.restaurant-list h2 {
+  padding-left: 5%;
+}
+
+.card {
+  border-radius: 18px;
+  background-color: white;
+  border: 2px solid blueviolet;
+  margin-bottom: 15px;
+}
+.card a {
+  text-decoration: none;
+}
+.card .card__img {
+  width: 100%;
+  height: 170px;
+  border-radius: 18px 18px 0 0;
+  object-fit: cover;
+}
+.card .card__name {
+  font-weight: 700;
+  color: black;
+  padding-left: 3%;
+  padding-top: 8px;
+  margin: 0;
+}
+.card .card__city {
+  color: black;
+  padding-left: 3%;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

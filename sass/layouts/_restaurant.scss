@@ -1,0 +1,39 @@
+.restaurant-list{
+    padding: 2rem 1rem;
+    background-color: $light-backg-color;
+    &__cards{
+        border: 2px solid palevioletred;
+    }
+    & h2{
+        padding-left: 5%;
+    }
+}
+.card{
+    & a{
+        text-decoration: none;
+    }
+    border-radius: 18px;
+    background-color: white;
+    border: 2px solid blueviolet;
+    margin-bottom: 15px;
+    & .card__img{
+        width: 100%;
+        height: 170px;
+        border-radius: 18px 18px 0 0;
+        object-fit: cover;
+    }
+    & .card__name{
+        font-weight: 700;
+        color:black;
+        padding-left: 3%;
+        padding-top: 8px;
+        margin:0;
+    }
+    & .card__city{
+        color:black;
+        padding-left: 3%;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+}
