@@ -1,17 +1,17 @@
 
 .functioning {
     margin-bottom: 3rem;
+    @include block-padding;
     & h2{
-        margin-left: 5%;
         margin-top: 2.5rem;
         margin-bottom: 2rem;
+        @include block-padding;
     }
     & ol{
         display: flex;
         flex-direction: column;
-        font-weight: 700;
         gap: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 15px;
         counter-reset: order-of-choice;
         @media (min-width: 800px){
             flex-direction: row;
@@ -21,13 +21,13 @@
     & li {
         & i.fas{
              margin-right: 1rem;
-             color: grey;
+             color: $icone-color;
         }
         position: relative;
         &::before{
             content: counter(order-of-choice);
             counter-increment: order-of-choice;
-            color: white;
+            color: $neutralColor;
             background-color: $primary;
             position: absolute;
             width: 30px;
@@ -40,10 +40,8 @@
         }
         list-style-type: none;
         background-color: $light-backg-color;
-        
-        border-radius: 15px;
         padding: 1.5rem 2rem;
-        @include base-Bshadow;
+        @include text-buble;
         &:hover{
             background-color: lighten($primary, 35);
             .fas{

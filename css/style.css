@@ -8,6 +8,7 @@
 body {
   margin: 0;
   font-family: roboto, sans-serif;
+  font-weight: 700;
 }
 
 .presentation_btn {
@@ -49,7 +50,7 @@ header {
 }
 .location_cityChoice {
   border: none;
-  background-color: rgba(223, 213, 213, 0.521);
+  background-color: rgba(223, 213, 213, 0);
   font-size: 14px;
   font-weight: 300;
   color: black;
@@ -67,7 +68,6 @@ header {
 }
 .presentation_title {
   font-size: 22px;
-  font-weight: 700;
   padding: 0 20%;
   margin: 0;
 }
@@ -83,18 +83,20 @@ header {
 
 .functioning {
   margin-bottom: 3rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .functioning h2 {
-  margin-left: 5%;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .functioning ol {
   display: flex;
   flex-direction: column;
-  font-weight: 700;
   gap: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 15px;
   counter-reset: order-of-choice;
 }
 @media (min-width: 800px) {
@@ -107,8 +109,8 @@ header {
   position: relative;
   list-style-type: none;
   background-color: rgba(244, 240, 240, 0.89);
-  border-radius: 15px;
   padding: 1.5rem 2rem;
+  border-radius: 15px;
   box-shadow: 1px 4px 8px 3px rgba(130, 130, 130, 0.21);
 }
 .functioning li i.fas {
@@ -143,6 +145,22 @@ header {
 .restaurant-list__cards {
   border: 2px solid palevioletred;
 }
+.restaurant-list__cards .new {
+  position: relative;
+}
+.restaurant-list__cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  height: 30px;
+  width: 25%;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  border-radius: 3%;
+}
 .restaurant-list h2 {
   padding-left: 5%;
 }
@@ -163,7 +181,6 @@ header {
   object-fit: cover;
 }
 .card .card__name {
-  font-weight: 700;
   color: black;
   padding-left: 3%;
   padding-top: 8px;
