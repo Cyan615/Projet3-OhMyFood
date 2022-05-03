@@ -1,4 +1,4 @@
-
+/* instructions search*/
 .functioning {
     margin-bottom: 3rem;
     @include block-padding;
@@ -36,7 +36,8 @@
             place-items: center;
             border-radius: 50%;
             left: -1rem;
-            top: 17px;
+            top: 50%;
+            transform: translateY(-50%);
         }
         list-style-type: none;
         background-color: $light-backg-color;

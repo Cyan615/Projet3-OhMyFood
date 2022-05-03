@@ -1,8 +1,8 @@
+/* list of restaurants */
 .restaurant-list{
     padding: 2rem 1rem;
     background-color: $light-backg-color;
     &__cards{
-        border: 2px solid palevioletred;
         .new{
             position: relative;
         }
@@ -19,19 +19,29 @@
             place-items: center;
             border-radius: 3%;
         }
+        @media (min-width: 800px){
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
     & h2{
         padding-left: 5%;
     }
 }
+/*restaurant card*/
 .card{
-    & a{
-        text-decoration: none;
-    }
+    position: relative;
     border-radius: 18px;
     background-color: $neutralColor;
-    border: 2px solid blueviolet;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    @media (min-width: 800px){
+        width: 300px;
+    }
+    /*heart icone*/
+    // & a{     &::before{ @include heart
+    
     & .card__img{
         width: 100%;
         height: 170px;
@@ -39,16 +49,16 @@
         object-fit: cover;
     }
     & .card__name{
-        color:black;
         padding-left: 3%;
         padding-top: 8px;
         margin:0;
     }
     & .card__city{
-        color:black;
         padding-left: 3%;
         padding-top: 5px;
         padding-bottom: 15px;
         margin: 0;
+        font-weight: 300;
     }
+    
 }

@@ -1,13 +1,16 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
 /* location choice of the city*/
 .location{
-    background-color: $background-color;
+    background-color: variables.$background-color;
     display: flex;
     justify-content: center;
     height: 50px;
-    box-shadow: 0px -1px 3px 2px $dark-shadow;
+    @include form-shadowLine;
     &_cityChoice{
         border: none;
-        background-color: $transparent-citychoice;
+        background-color: variables.$transparent-citychoice;
         font-size: 14px;
         font-weight: 300;
         color: black;
