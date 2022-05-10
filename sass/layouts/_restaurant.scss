@@ -19,7 +19,7 @@
             place-items: center;
             border-radius: 3%;
         }
-        @media (min-width: 800px){
+        @media (min-width: $breakpoint){
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -36,7 +36,7 @@
     border-radius: 18px;
     background-color: $neutralColor;
     margin-bottom: 20px;
-    @media (min-width: 800px){
+    @media (min-width: $breakpoint){
         width: 300px;
     }
     /*heart icone*/

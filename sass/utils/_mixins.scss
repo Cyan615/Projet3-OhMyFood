@@ -15,35 +15,45 @@
 @mixin form-shadowLine {
     box-shadow: 0px -1px 3px 2px $dark-shadow;
 }
-// bulle de texte
+// text bubble
 @mixin text-buble {
     border-radius: 15px;
     @include base-Bshadow;
 }
 
-// mise en page droite et gauche
+// right half text bubble
+@mixin rightText-buble {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+// right and left layout
 @mixin block-padding {
     padding-left: 5%;
     padding-right: 5%;
 }
-@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+// general parameters font awesome
+@mixin font-awesome5 ($font-weight: 400) {
     display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: "font awesome 5 free";
-        font-weight: $font-weight;
-        content: "\f004";
-        font-size: 25px;
-        position: absolute;
-        bottom: 10%;
-        right: 5%; 
-        color: $color;
-        background-clip: text;
-        -webkit-background-clip: text;
-        opacity: $opacity;
-        transition: all 200ms ease-in-out;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "font awesome 5 free";
+    font-weight: $font-weight;
+}
+// heart animation filled in the selection
+@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+    @include font-awesome5($font-weight);
+    content: "\f004";
+    font-size: 25px;
+    position: absolute;
+    bottom: 10%;
+    right: 5%; 
+    color: $color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: $opacity;
+    transition: all 200ms ease-in-out;
 }
 @mixin heart-animated {
     position: relative;
@@ -58,4 +68,57 @@
             opacity: 1;
             transform: scale(1.1);
         }
+}
+// page banner img parametre
+@mixin page-imgBanner {
+    display: block;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: 50% 60%;
+}
+@mixin page-font {
+    font-weight: 300;
+    font-size: 14px; 
+}
+// dish selection button animation
+@mixin Page-tick {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: $tertiary;
+    @include rightText-buble;
+    $tick-width: 20%;
+    width: $tick-width;
+    margin-right: -1*$tick-width;
+    transition: margin-right 0.5s;
+    i{
+        display: grid;
+        place-items: center;
+        background: $neutralColor;
+        aspect-ratio: 1;
+        width: 20px;
+        border-radius: 50%;
+        color: $tertiary;
+    } 
+}
+// menu card effect
+@mixin page-cardMenu {
+    background: $background-color;
+    border-radius: 25px 25px 0 0 ;
+    margin-top: -50px; 
+}
+// button back landing page
+@mixin page-btnBack {
+    @include font-awesome5(900);
+    content: "\f060";
+    font-size: 22px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 5%; 
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
 }
