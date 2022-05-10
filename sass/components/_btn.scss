@@ -1,0 +1,21 @@
+.presentation_btn{
+    @include btn-design;
+    box-shadow: 3px 3px 12px 3px $shadow;
+    cursor: pointer;
+    transition: all;
+    &:hover{
+        box-shadow: 3px 3px 12px 3px darken($shadow, 30);
+        opacity: 0.8;
+    }
+}
+
+.command-button{
+    @include btn-design;
+    box-shadow: 3px 3px 12px 3px $shadow;
+    cursor: pointer;
+    transition: all;
+    &:hover{
+        box-shadow: 3px 3px 12px 3px darken($shadow, 30);
+        opacity: 0.8;
+    }
+}

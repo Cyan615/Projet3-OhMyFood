@@ -1,0 +1,23 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+/* location choice of the city*/
+.location{
+    background-color: variables.$background-color;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    @include form-shadowLine;
+    &_cityChoice{
+        border: none;
+        background-color: variables.$transparent-citychoice;
+        font-size: 14px;
+        font-weight: 300;
+        color: black;
+    }
+    &_icone{
+        display: flex;
+        align-items: center;
+        padding-right: 15px;
+    }
+}

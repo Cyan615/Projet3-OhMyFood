@@ -1,0 +1,20 @@
+/* site description*/
+.presentation{
+    text-align: center;
+    background-color: $light-backg-color;
+    padding: 2rem 0 3rem 0;
+    &_title{
+    font-size: 22px;
+    padding: 0 20%;
+    margin: 0;
+    }
+    &_info{
+        font-weight: 100;
+        padding: 3% 5%;
+        margin-bottom: 20px;
+    }
+    &_btn{
+        width: 13rem;
+        font-size: 15px;
+    }
+}

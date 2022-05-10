@@ -1,0 +1,53 @@
+/* instructions search*/
+.functioning {
+    margin-bottom: 3rem;
+    @include block-padding;
+    & h2{
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+        @include block-padding;
+    }
+    & ol{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-left: 15px;
+        counter-reset: order-of-choice;
+        @media (min-width: 800px){
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    & li {
+        & i.fas{
+             margin-right: 1rem;
+             color: $icone-color;
+        }
+        position: relative;
+        &::before{
+            content: counter(order-of-choice);
+            counter-increment: order-of-choice;
+            color: $neutralColor;
+            background-color: $primary;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            left: -1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        list-style-type: none;
+        background-color: $light-backg-color;
+        padding: 1.5rem 2rem;
+        @include text-buble;
+        &:hover{
+            background-color: lighten($primary, 35);
+            .fas{
+                color: $primary;
+            }
+        }
+    }
+}
