@@ -122,3 +122,12 @@
     -webkit-background-clip: text;
     opacity: 1;
 }
+// menu text animation
+@mixin text-anim {
+    @for $d from 1 through 9 {
+        &:nth-child(#{$d}){
+            animation-delay: 200ms*$d;
+        }
+    }
+    animation: appear 3s ease both;
+}

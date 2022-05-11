@@ -1,4 +1,5 @@
 @use "../utils/mixins";
+@use "../utils/keyframes";
 /* site page menu*/
 .page{
     position: relative;
@@ -43,6 +44,7 @@
         padding-bottom: 5px;
         border-bottom: 3px solid $tertiary;
         width: 40px;
+        animation: slide 0.5s ease-in-out;
     }
 }
 .dish{
@@ -51,6 +53,7 @@
     align-items: flex-end; 
     @include text-buble;
     overflow: hidden;
+    @include text-anim;
     &:hover .dish__tick{
         margin-right: 0;
     }
