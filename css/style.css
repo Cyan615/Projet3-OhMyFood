@@ -326,27 +326,6 @@ footer .footer__list {
   }
 }
 
-@keyframes slide {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: scaleX(0.5);
-    transform-origin: left;
-  }
-  to {
-    opacity: 1;
-    transform: scaleX(1);
-  }
-}
 /* site page menu*/
 .page {
   position: relative;
@@ -465,6 +444,16 @@ footer .footer__list {
   width: 40px;
   animation: slide 0.5s ease-in-out;
 }
+@keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 
 .dish {
   background: white;
@@ -473,7 +462,7 @@ footer .footer__list {
   border-radius: 15px;
   box-shadow: 1px 4px 8px 3px rgba(130, 130, 130, 0.21);
   overflow: hidden;
-  animation: appear 3s ease both;
+  animation: appear 2s ease both;
 }
 .dish:nth-child(1) {
   animation-delay: 200ms;
@@ -502,8 +491,30 @@ footer .footer__list {
 .dish:nth-child(9) {
   animation-delay: 1800ms;
 }
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scaleX(0.5);
+    transform-origin: left;
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
 .dish:hover .dish__tick {
   margin-right: 0;
+}
+.dish:hover i {
+  animation: check-spin 0.5s ease-in-out;
+}
+@keyframes check-spin {
+  from {
+    transform: rotate(-270deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 .dish__item {
   padding: 3%;
