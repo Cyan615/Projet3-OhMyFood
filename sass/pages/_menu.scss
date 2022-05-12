@@ -40,9 +40,7 @@
     gap:1rem;
     &__title{
         @include page-font;
-        padding-bottom: 5px;
-        border-bottom: 3px solid $tertiary;
-        width: 40px;
+        @include title-border;
         @include slide;
     }
 }
@@ -63,6 +61,8 @@
     }
     &__item{
         padding: $Page-padding;
+        overflow: hidden;
+        @include text-retract;
     }
     &__price{
         margin-left: auto;

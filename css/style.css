@@ -506,7 +506,7 @@ footer .footer__list {
   margin-right: 0;
 }
 .dish:hover i {
-  animation: check-spin 0.5s ease-in-out;
+  animation: check-spin 0.5s ease-in-out reverse;
 }
 @keyframes check-spin {
   from {
@@ -518,6 +518,12 @@ footer .footer__list {
 }
 .dish__item {
   padding: 3%;
+  overflow: hidden;
+}
+.dish__item h4, .dish__item p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .dish__price {
   margin-left: auto;

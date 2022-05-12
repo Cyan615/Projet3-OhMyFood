@@ -81,6 +81,11 @@
     font-weight: 300;
     font-size: 14px; 
 }
+@mixin title-border{
+    padding-bottom: 5px;
+    border-bottom: 3px solid $tertiary;
+    width: 40px;
+}
 // dish selection button animation
 @mixin Page-tick {
     height: 100%;
@@ -167,5 +172,12 @@
             transform: rotate(0deg);
         }
     }
-    animation: check-spin 0.5s ease-in-out;
+    animation: check-spin 0.5s ease-in-out reverse;
+}
+@mixin text-retract {
+    h4, p{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
