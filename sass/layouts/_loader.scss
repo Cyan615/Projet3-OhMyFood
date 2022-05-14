@@ -1,0 +1,45 @@
+@use "../utils/mixins";
+
+.loader{
+    position: fixed;
+    @include gradient;
+    inset: 0;
+    height: 100vh;
+    z-index: 1;
+    // opacity: 0.9;
+    // animation: disappear 1s 3s forwards;
+}
+.logo_shake{
+    text-shadow: 7px -3px 12px rgba(0,0,0,0.65);
+    &::after {        
+        @include loader-logo;
+    }
+}
+.icone_1{
+    &::after {
+        @include font-awesome5(900);
+        content: "\F561";
+        @include loader-icone;
+    }
+}
+.icone_2{
+    &::after{
+        @include font-awesome5(900);
+        content: "\f787";
+        @include loader-icone(50px, 46%);
+    }
+}
+.icone_3{
+    &::after{
+        @include font-awesome5(900);
+        content: "\f770";
+        @include loader-icone(50px, 36%);
+    }
+}
+.icone_4{
+    &::after{
+        @include font-awesome5(900);
+        content: "\f81e";
+        @include loader-icone(50px, 34%);
+    }
+}
