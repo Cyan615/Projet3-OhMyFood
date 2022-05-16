@@ -203,10 +203,10 @@
 @mixin loader-logo {
     content: "Oh my food";
     font-family: "shrikhand";     
-    font-size: 400%;
+    font-size: 190%;
     position: absolute;
-    top: 20%;
-    right: 40%; 
+    top: 25%;
+    right: 35%; 
     background: repeating-radial-gradient(ellipse 50% 20%, $primary, $secondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
@@ -226,14 +226,14 @@
 }
 
 
-@mixin loader-icone($font-size:220%, $right:52%) {
+@mixin loader-icone($font-size:25px, $right:52%) {
     position: absolute;
     opacity: 0;
-    top: 26%;
+    top: 28%;
     right: $right; 
     color: $tertiary;
     font-size: $font-size;
     background-clip: text;
     -webkit-background-clip: text;
-    animation: drop 1s infinite backwards;
+    animation: drop 2s infinite backwards;
 }

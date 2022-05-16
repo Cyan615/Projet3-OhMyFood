@@ -7,8 +7,8 @@
     
 }
 
-.logo_shake{
-    &::after {        
+.logo_shake{      
+    &::after { 
         @include loader-logo;
     }
 }
@@ -23,7 +23,7 @@
     &::after{
         @include font-awesome5(600);
         content: "\f787";
-        @include loader-icone(210%, 44%);
+        @include loader-icone(18px, 44%);
         animation-delay: 100ms;
     }
 }
@@ -31,7 +31,7 @@
     &::after{
         @include font-awesome5(900);
         content: "\f79f";
-        @include loader-icone(200%,40%);
+        @include loader-icone(22px,40%);
         animation-delay: 150ms;
     }
 }
@@ -39,7 +39,7 @@
     &::after{
         @include font-awesome5(900);
         content: "\f0f4";
-        @include loader-icone(180%, 48%);
+        @include loader-icone(24px, 48%);
         animation-delay: 200ms;
     }
 }
@@ -47,7 +47,7 @@
     &::after{
         @include font-awesome5(900);
         content: "\f5d1";
-        @include loader-icone(190%, 58%);
+        @include loader-icone(16px, 58%);
         animation-delay: 250ms;
     }
 }

@@ -406,10 +406,10 @@ footer .footer__list {
 .logo_shake::after {
   content: "Oh my food";
   font-family: "shrikhand";
-  font-size: 400%;
+  font-size: 190%;
   position: absolute;
-  top: 20%;
-  right: 40%;
+  top: 25%;
+  right: 35%;
   background: repeating-radial-gradient(ellipse 50% 20%, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -428,13 +428,13 @@ footer .footer__list {
   content: "\f561";
   position: absolute;
   opacity: 0;
-  top: 26%;
+  top: 28%;
   right: 52%;
   color: #99e2d0;
-  font-size: 220%;
+  font-size: 25px;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 1s infinite backwards;
+  animation: drop 2s infinite backwards;
 }
 
 .icone_2::after {
@@ -448,13 +448,13 @@ footer .footer__list {
   content: "\f787";
   position: absolute;
   opacity: 0;
-  top: 26%;
+  top: 28%;
   right: 44%;
   color: #99e2d0;
-  font-size: 210%;
+  font-size: 18px;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 1s infinite backwards;
+  animation: drop 2s infinite backwards;
   animation-delay: 100ms;
 }
 
@@ -469,13 +469,13 @@ footer .footer__list {
   content: "\f79f";
   position: absolute;
   opacity: 0;
-  top: 26%;
+  top: 28%;
   right: 40%;
   color: #99e2d0;
-  font-size: 200%;
+  font-size: 22px;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 1s infinite backwards;
+  animation: drop 2s infinite backwards;
   animation-delay: 150ms;
 }
 
@@ -490,13 +490,13 @@ footer .footer__list {
   content: "\f0f4";
   position: absolute;
   opacity: 0;
-  top: 26%;
+  top: 28%;
   right: 48%;
   color: #99e2d0;
-  font-size: 180%;
+  font-size: 24px;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 1s infinite backwards;
+  animation: drop 2s infinite backwards;
   animation-delay: 200ms;
 }
 
@@ -511,13 +511,13 @@ footer .footer__list {
   content: "\f5d1";
   position: absolute;
   opacity: 0;
-  top: 26%;
+  top: 28%;
   right: 58%;
   color: #99e2d0;
-  font-size: 190%;
+  font-size: 16px;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 1s infinite backwards;
+  animation: drop 2s infinite backwards;
   animation-delay: 250ms;
 }
 
