@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
-@keyframes disappear {
-  to {
-    transform: rotate(380deg) scale(0);
-  }
-}
 @keyframes shake {
   0%, 100% {
     transform: translateX(0);
@@ -108,11 +103,6 @@ header {
   max-width: 300px;
 }
 
-@keyframes disappear {
-  to {
-    transform: rotate(380deg) scale(0);
-  }
-}
 @keyframes shake {
   0%, 100% {
     transform: translateX(0);
@@ -378,11 +368,6 @@ footer .footer__list {
   }
 }
 
-@keyframes disappear {
-  to {
-    transform: rotate(380deg) scale(0);
-  }
-}
 @keyframes shake {
   0%, 100% {
     transform: translateX(0);
@@ -406,25 +391,29 @@ footer .footer__list {
 }
 .loader {
   position: fixed;
-  background-image: linear-gradient(#ff79da, #9356dc);
-  inset: 0;
+  background-color: #e8f9f5;
   height: 100vh;
+  inset: 0;
+  animation: disappear 1s 3s forwards;
   z-index: 1;
 }
-
-.logo_shake {
-  text-shadow: 7px -3px 12px rgba(0, 0, 0, 0.65);
+@keyframes disappear {
+  to {
+    transform: rotate(380deg) scale(0);
+  }
 }
+
 .logo_shake::after {
   content: "Oh my food";
   font-family: "shrikhand";
-  font-size: 70px;
+  font-size: 400%;
   position: absolute;
   top: 20%;
   right: 40%;
-  color: #99e2d0;
+  background: repeating-radial-gradient(ellipse 50% 20%, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
-  font-size: 60px;
   animation: shake 2s ease infinite;
 }
 
@@ -440,12 +429,12 @@ footer .footer__list {
   position: absolute;
   opacity: 0;
   top: 26%;
-  right: 50%;
+  right: 52%;
   color: #99e2d0;
-  font-size: 60px;
+  font-size: 220%;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 2s backwards;
+  animation: drop 1s infinite backwards;
 }
 
 .icone_2::after {
@@ -455,17 +444,18 @@ footer .footer__list {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "font awesome 5 free";
-  font-weight: 900;
+  font-weight: 600;
   content: "\f787";
   position: absolute;
   opacity: 0;
   top: 26%;
-  right: 46%;
+  right: 44%;
   color: #99e2d0;
-  font-size: 50px;
+  font-size: 210%;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 2s backwards;
+  animation: drop 1s infinite backwards;
+  animation-delay: 100ms;
 }
 
 .icone_3::after {
@@ -476,16 +466,17 @@ footer .footer__list {
   -webkit-font-smoothing: antialiased;
   font-family: "font awesome 5 free";
   font-weight: 900;
-  content: "\f770";
+  content: "\f79f";
   position: absolute;
   opacity: 0;
   top: 26%;
-  right: 36%;
+  right: 40%;
   color: #99e2d0;
-  font-size: 50px;
+  font-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 2s backwards;
+  animation: drop 1s infinite backwards;
+  animation-delay: 150ms;
 }
 
 .icone_4::after {
@@ -496,23 +487,40 @@ footer .footer__list {
   -webkit-font-smoothing: antialiased;
   font-family: "font awesome 5 free";
   font-weight: 900;
-  content: "\f81e";
+  content: "\f0f4";
   position: absolute;
   opacity: 0;
   top: 26%;
-  right: 34%;
+  right: 48%;
   color: #99e2d0;
-  font-size: 50px;
+  font-size: 180%;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: drop 2s backwards;
+  animation: drop 1s infinite backwards;
+  animation-delay: 200ms;
 }
 
-@keyframes disappear {
-  to {
-    transform: rotate(380deg) scale(0);
-  }
+.icone_5::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f5d1";
+  position: absolute;
+  opacity: 0;
+  top: 26%;
+  right: 58%;
+  color: #99e2d0;
+  font-size: 190%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: drop 1s infinite backwards;
+  animation-delay: 250ms;
 }
+
 @keyframes shake {
   0%, 100% {
     transform: translateX(0);

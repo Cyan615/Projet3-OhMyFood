@@ -181,12 +181,20 @@
         text-overflow: ellipsis;
     }
 }
-// loader spinner
-@keyframes disappear{
-    to{
-        transform: rotate(380deg) scale(0);
+// loading spinner
+@mixin load-page {
+    background-color: lighten($tertiary, 20%);
+    height: 100vh;
+    inset: 0;
+    
+    @keyframes disappear{
+        to{
+            transform: rotate(380deg) scale(0);
+        }
     }
+   animation: disappear 1s 3s forwards; 
 }
+// animaations
 @keyframes shake {
 	0%, 100% {transform: translateX(0);}
 	10%, 30%, 50%, 70%, 90% {transform: translateX(-15px);}
@@ -195,26 +203,17 @@
 @mixin loader-logo {
     content: "Oh my food";
     font-family: "shrikhand";     
-    font-size: 70px;
+    font-size: 400%;
     position: absolute;
     top: 20%;
     right: 40%; 
-    color: $tertiary;
+    background: repeating-radial-gradient(ellipse 50% 20%, $primary, $secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
     font-weight: 600;
-    font-size: 60px;
     animation: shake 2s ease infinite;
 }
-@mixin loader-icone($font-size:60px, $right:50%) {
-    position: absolute;
-    opacity: 0;
-    top: 26%;
-    right: $right; 
-    color: $tertiary;
-    font-size: $font-size;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: drop 2s backwards;
-}
+    
 @keyframes drop {
     0%{
         opacity: 0.8;
@@ -224,4 +223,17 @@
         opacity: 1;
         transform: rotateY(380deg) translateY(600px);
     }
+}
+
+
+@mixin loader-icone($font-size:220%, $right:52%) {
+    position: absolute;
+    opacity: 0;
+    top: 26%;
+    right: $right; 
+    color: $tertiary;
+    font-size: $font-size;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: drop 1s infinite backwards;
 }
