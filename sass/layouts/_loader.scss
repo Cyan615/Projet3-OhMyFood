@@ -47,7 +47,7 @@
     &::after{
         @include font-awesome5(900);
         content: "\f5d1";
-        @include loader-icone(16px, 58%);
+        @include loader-icone(16px, 54%);
         animation-delay: 250ms;
     }
 }
