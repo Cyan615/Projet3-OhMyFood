@@ -81,6 +81,11 @@
     font-weight: 300;
     font-size: 14px; 
 }
+@mixin title-border{
+    padding-bottom: 5px;
+    border-bottom: 3px solid $tertiary;
+    width: 40px;
+}
 // dish selection button animation
 @mixin Page-tick {
     height: 100%;
@@ -121,4 +126,114 @@
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 1;
+}
+// menu text animation
+// menu title animation
+@mixin slide {
+    @keyframes slide{
+        from{
+            margin-left: 100%;
+            width: 300%;
+        }
+        to{
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+    animation: slide 0.5s ease-in-out;
+}
+// title of dishes animation
+@mixin text-anim {
+    @for $d from 1 through 9 {
+        &:nth-child(#{$d}){
+            animation-delay: 200ms*$d;
+        }
+    }
+    @keyframes appear{
+        from{
+            opacity: 0;
+            transform: scaleX(0.5);
+            transform-origin: left;
+        }
+        to{
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+    animation: appear 2s ease both;
+}
+// tick spin animation
+@mixin check-spin {
+    @keyframes check-spin{
+        from{
+            transform: rotate(-270deg);
+        }
+        to{
+            transform: rotate(0deg);
+        }
+    }
+    animation: check-spin 0.5s ease-in-out reverse;
+}
+@mixin text-retract {
+    h4, p{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+// loading spinner
+@mixin load-page {
+    background-color: lighten($tertiary, 20%);
+    height: 100vh;
+    inset: 0;
+    
+    @keyframes disappear{
+        to{
+            transform: rotate(380deg) scale(0);
+        }
+    }
+   animation: disappear 1s 3s forwards; 
+}
+// animaations
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-15px);}
+	20%, 40%, 60%, 80% {transform: translateX(15px);}
+}
+@mixin loader-logo {
+    content: "Oh my food";
+    font-family: "shrikhand";     
+    font-size: 190%;
+    position: absolute;
+    top: 25%;
+    right: 35%; 
+    background: repeating-radial-gradient(ellipse 50% 20%, $primary, $secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    font-weight: 600;
+    animation: shake 2s ease infinite;
+}
+    
+@keyframes drop {
+    0%{
+        opacity: 0.8;
+        transform: rotateY(0) translateY(0px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(380deg) translateY(600px);
+    }
+}
+
+
+@mixin loader-icone($font-size:25px, $right:52%) {
+    position: absolute;
+    opacity: 0;
+    top: 28%;
+    right: $right; 
+    color: $tertiary;
+    font-size: $font-size;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: drop 2s infinite backwards;
 }
