@@ -1,25 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-15px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(15px);
-  }
-}
-@keyframes drop {
-  0% {
-    opacity: 0.8;
-    transform: rotateY(0) translateY(0px);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(380deg) translateY(600px);
-  }
-}
 *,
 ::before,
 ::after {
@@ -103,27 +82,6 @@ header {
   max-width: 300px;
 }
 
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-15px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(15px);
-  }
-}
-@keyframes drop {
-  0% {
-    opacity: 0.8;
-    transform: rotateY(0) translateY(0px);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(380deg) translateY(600px);
-  }
-}
 /* location choice of the city*/
 .location {
   background-color: whitesmoke;
@@ -368,27 +326,6 @@ footer .footer__list {
   }
 }
 
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-15px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(15px);
-  }
-}
-@keyframes drop {
-  0% {
-    opacity: 0.8;
-    transform: rotateY(0) translateY(0px);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(380deg) translateY(600px);
-  }
-}
 .loader {
   position: fixed;
   background-color: #e8f9f5;
@@ -416,6 +353,23 @@ footer .footer__list {
   font-weight: 600;
   animation: shake 2s ease infinite;
 }
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-15px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(15px);
+  }
+}
+@media (min-width: 800px) {
+  .logo_shake::after {
+    font-size: 60px;
+    top: 20%;
+  }
+}
 
 .icone_1::after {
   display: inline-block;
@@ -435,6 +389,16 @@ footer .footer__list {
   background-clip: text;
   -webkit-background-clip: text;
   animation: drop 2s infinite backwards;
+}
+@keyframes drop {
+  0% {
+    opacity: 0.8;
+    transform: rotateY(0) translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(380deg) translateY(600px);
+  }
 }
 
 .icone_2::after {
@@ -457,6 +421,16 @@ footer .footer__list {
   animation: drop 2s infinite backwards;
   animation-delay: 100ms;
 }
+@keyframes drop {
+  0% {
+    opacity: 0.8;
+    transform: rotateY(0) translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(380deg) translateY(600px);
+  }
+}
 
 .icone_3::after {
   display: inline-block;
@@ -477,6 +451,16 @@ footer .footer__list {
   -webkit-background-clip: text;
   animation: drop 2s infinite backwards;
   animation-delay: 150ms;
+}
+@keyframes drop {
+  0% {
+    opacity: 0.8;
+    transform: rotateY(0) translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(380deg) translateY(600px);
+  }
 }
 
 .icone_4::after {
@@ -499,6 +483,16 @@ footer .footer__list {
   animation: drop 2s infinite backwards;
   animation-delay: 200ms;
 }
+@keyframes drop {
+  0% {
+    opacity: 0.8;
+    transform: rotateY(0) translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(380deg) translateY(600px);
+  }
+}
 
 .icone_5::after {
   display: inline-block;
@@ -520,18 +514,6 @@ footer .footer__list {
   animation: drop 2s infinite backwards;
   animation-delay: 250ms;
 }
-
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-15px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(15px);
-  }
-}
 @keyframes drop {
   0% {
     opacity: 0.8;
@@ -542,6 +524,7 @@ footer .footer__list {
     transform: rotateY(380deg) translateY(600px);
   }
 }
+
 /* site page menu*/
 .page {
   position: relative;
