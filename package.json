@@ -1,0 +1,25 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "mon projet OpenClassrooms 3 OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss css/style.css -u autoprefixer -o ./build/style.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyan615/Projet3-OhMyFood.git"
+  },
+  "author": "NM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyan615/Projet3-OhMyFood/issues"
+  },
+  "homepage": "https://github.com/Cyan615/Projet3-OhMyFood#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0"
+  }
+}
