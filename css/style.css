@@ -364,12 +364,6 @@ footer .footer__list {
     transform: translateX(15px);
   }
 }
-@media (min-width: 800px) {
-  .logo_shake::after {
-    font-size: 60px;
-    top: 20%;
-  }
-}
 
 .icone_1::after {
   display: inline-block;
