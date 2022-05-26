@@ -69,6 +69,20 @@
             transform: scale(1.1);
         }
 }
+// button back landing page
+@mixin page-btnBack {
+    @include font-awesome5(900);
+    content: "\f060";
+    font-size: 22px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 5%; 
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+}
 // page banner img parametre
 @mixin page-imgBanner {
     display: block;
@@ -85,6 +99,12 @@
     padding-bottom: 5px;
     border-bottom: 3px solid $tertiary;
     width: 40px;
+}
+// menu card effect
+@mixin page-cardMenu {
+    background: $background-color;
+    border-radius: 25px 25px 0 0 ;
+    margin-top: -50px; 
 }
 // dish selection button animation
 @mixin Page-tick {
@@ -107,25 +127,24 @@
         color: $tertiary;
     } 
 }
-// menu card effect
-@mixin page-cardMenu {
-    background: $background-color;
-    border-radius: 25px 25px 0 0 ;
-    margin-top: -50px; 
+// tick spin animation
+@mixin check-spin {
+    @keyframes check-spin{
+        from{
+            transform: rotate(-270deg);
+        }
+        to{
+            transform: rotate(0deg);
+        }
+    }
+    animation: check-spin 0.5s ease-in-out reverse;
 }
-// button back landing page
-@mixin page-btnBack {
-    @include font-awesome5(900);
-    content: "\f060";
-    font-size: 22px;
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    left: 5%; 
-    color: black;
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 1;
+@mixin text-retract {
+    h4, p{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
 // menu text animation
 // menu title animation
@@ -162,25 +181,7 @@
     }
     animation: appear 2s ease both;
 }
-// tick spin animation
-@mixin check-spin {
-    @keyframes check-spin{
-        from{
-            transform: rotate(-270deg);
-        }
-        to{
-            transform: rotate(0deg);
-        }
-    }
-    animation: check-spin 0.5s ease-in-out reverse;
-}
-@mixin text-retract {
-    h4, p{
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-}
+
 // loading spinner
 @mixin load-page {
     background-color: lighten($tertiary, 20%);
