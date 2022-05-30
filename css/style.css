@@ -229,7 +229,7 @@ header {
     width: 300px;
   }
 }
-.card a::before {
+.card__heart::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -248,7 +248,7 @@ header {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.card a::after {
+.card__heart::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -268,7 +268,7 @@ header {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(#ff79da, #9356dc);
 }
-.card a:hover::after {
+.card__heart:hover::after {
   opacity: 1;
   transform: scale(1.1);
 }
@@ -552,6 +552,8 @@ footer .footer__list {
 }
 
 .resto-name {
+  display: flex;
+  justify-content: space-between;
   position: relative;
   background: whitesmoke;
   border-radius: 25px 25px 0 0;
@@ -561,9 +563,12 @@ footer .footer__list {
   padding-top: 2rem;
   font-family: "shrikhand", "cursive";
   padding-left: 5%;
+}
+.resto-name .heart {
+  margin-right: 5%;
   position: relative;
 }
-.resto-name h2::before {
+.resto-name .heart::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -582,7 +587,7 @@ footer .footer__list {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.resto-name h2::after {
+.resto-name .heart::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -602,7 +607,7 @@ footer .footer__list {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(#ff79da, #9356dc);
 }
-.resto-name h2:hover::after {
+.resto-name .heart:hover::after {
   opacity: 1;
   transform: scale(1.1);
 }

@@ -11,12 +11,17 @@
 }
 // restaurant name page
 .resto-name{
+    display: flex;
+    justify-content: space-between;
     position: relative;
     @include page-cardMenu;
     h2{
         padding-top: 2rem;
         font-family: "shrikhand", "cursive";
         padding-left: 5%;
+    }
+    .heart{
+        margin-right: 5%;
         @include heart-animated;
     }
 }
